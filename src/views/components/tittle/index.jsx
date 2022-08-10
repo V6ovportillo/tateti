@@ -1,11 +1,11 @@
 import "./index.scss";
 
-const Titulo = ()=>{
+const Tittle = ()=>{
     return (
-        <div id="titulo" className="titulo">
+        <div id="tittle" className="tittle">
             <h1>Ta Te Ti</h1>
         </div>
     );
 }
 
-export default Titulo;
+export default Tittle;
