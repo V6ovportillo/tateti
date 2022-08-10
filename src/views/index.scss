@@ -1,4 +1,8 @@
 .app{
-    height: 100hw;
-    width: 100hw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #22333B;
 }

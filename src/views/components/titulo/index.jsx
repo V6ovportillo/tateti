@@ -1,3 +1,5 @@
+import "./index.scss";
+
 const Titulo = ()=>{
     return (
         <div id="titulo" className="titulo">
