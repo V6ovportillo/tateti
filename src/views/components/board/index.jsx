@@ -14,6 +14,7 @@ const Board = ({ squares, onClick, turn, winnerSquares }) => {
             />
         ))
     );
+    
     return (
         <div id="board" className="board">
             <div className="container">

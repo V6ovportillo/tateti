@@ -1,25 +1,25 @@
 .score-board{
-    font-size: 40px;
-    color: white;
-    margin-top: 10px;
-    width: 340px;
-
+    display: flex;
+    justify-content: center;
+    
     .container{
-        height: 50px;
         display: flex;
+        height: 50px;
+        margin: 10px;
+        width: 340px;
+        font-size: 40px;
+        color: white;
+        font-weight: bold;
+        
         .score-jugador-x{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 0.5;
+            text-align: center;
+            flex:1;
             background-color: #CD493A;
         }
         .score-jugador-o{
-            flex: 0.5;
-            display: flex;
+            text-align: center;
+            flex:1;
             background-color: #4392F1;
-            align-items: center;
-            justify-content: center;
         }
     }
 }
