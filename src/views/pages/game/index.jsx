@@ -3,6 +3,7 @@ import ScoreBoard from "./../../components/scoreBoard";
 import { useState } from "react";
 import "./index.scss";
 import Menu from "../../components/menu";
+import Tittle from "../../components/tittle";
 
 const winningPositions = [
     [0, 1, 2],
@@ -84,6 +85,7 @@ const Game = () => {
 
     return (
         <div className="game">
+            <Tittle/>
             <Board winnerSquares={winnerSquares} turn={turn} squares={squares} onClick={handleClick} />
             <ScoreBoard scoreX={score.x} scoreO={score.o} />
             <Menu playAgain={playAgain}/>
