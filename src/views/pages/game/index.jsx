@@ -1,8 +1,8 @@
-
-
 import Board from "./../../components/board";
 import ScoreBoard from "./../../components/scoreBoard";
 import { useState } from "react";
+import "./index.scss";
+import Menu from "../../components/menu";
 
 const winningPositions = [
     [0, 1, 2],
@@ -33,7 +33,7 @@ const Game = () => {
         setSquares(newSquares);
         checkForWinner(newSquares);
     }
-    
+
     const checkForWinner = newSquares => {
         //Chequear un ganador
         for (let i = 0; i < winningPositions.length; i++) {
@@ -74,12 +74,20 @@ const Game = () => {
         setSquares(Array(9).fill(null));
         setWinnerSquares([]);
     }
+    
+    const playAgain = () => {
+        setTurn('x');
+        setSquares(Array(9).fill(null));
+        setWinnerSquares([]);
+        setScore({"x": 0, "o":0});
+    }
 
     return (
-    <div className="game">
-        <Board winnerSquares={winnerSquares} turn={turn} squares={squares} onClick={handleClick} />
-        <ScoreBoard scoreX={score.x} scoreO={score.o} />
-    </div>
+        <div className="game">
+            <Board winnerSquares={winnerSquares} turn={turn} squares={squares} onClick={handleClick} />
+            <ScoreBoard scoreX={score.x} scoreO={score.o} />
+            <Menu playAgain={playAgain}/>
+        </div>
     );
 }
 

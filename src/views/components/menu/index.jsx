@@ -1,9 +1,13 @@
 import "./index.scss";
 
-const Menu = ()=>{
+const Menu = ({ playAgain }) => {
+    const handleClick = (e) => {
+        playAgain();
+    }
+
     return (
         <div id="menu" className="menu">
-            <h1>Probando Menu</h1>
+            <button className="play-again" onClick={() => handleClick()}>Play Again</button>
         </div>
     );
 }
